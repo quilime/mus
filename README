@@ -1,0 +1,50 @@
+tree
+
+	/reg
+		username (check avail)
+		email (private)
+		password
+		verify
+		captcha
+		create account		
+
+
+	/login
+		username (or email)
+		password (forgot pw)
+		login
+
+
+	/sets
+		recent (rss)
+		random
+		
+
+	/submit
+		(must be logged in)
+		title
+		description
+		zipfile
+		image
+		
+
+	/user
+		name
+		email
+		url
+		description
+		activity (rss)
+		
+
+	/user/set-name
+		image/screen
+		download
+		permalink
+		description
+		# mark
+		
+
+	/help
+		docs
+		download example set
+
