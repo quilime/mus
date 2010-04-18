@@ -21,6 +21,9 @@
 	    $s->assign('domain', get_domain_name());
 	    $s->assign('base_dir', get_base_dir());
 	    $s->assign('base_href', get_base_href());
+	    $s->assign('logo', '<img src="' . LOGO . '" />');	
+	    $s->assign('site_title', SITE_TITLE);		
+	
     
 //	    $s->clear_all_cache();
     
@@ -86,6 +89,13 @@
         $parsed = parse_url($url);
         return $parsed['host'];
     }	
+
+
+    function get_url_string()
+    {
+        return substr($_SERVER['SCRIPT_URL'], strlen(get_base_dir() . '/'));
+    }
+
 
 
    /**

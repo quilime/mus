@@ -5,25 +5,43 @@
 	require_once 'data.php';
 	require_once 'output.php';
 
-    list($response_format, $response_mime_type) = parse_format($_GET['format'], 'html');
+    //list($response_format, $response_mime_type) = parse_format($_GET['format'], 'html');
 
-    $dbh =& get_db_connection();
+	$url_string = get_url_string();
+	
+	if (is_string($url_string)) {
+		switch(basename($url_string)) {
+			
+			case 'reg' :
+			case 'login' :
+				include('login.php');
+				break;
 
-    if(get_request_user())
-    {
-		// auth stuff here
-    }
-
-    $dbh = null;
-
-    $sm = get_smarty_instance();
-
-    if(get_request_user())
-    {
-		// secure template vars here
-    }
-
-    header("Content-Type: {$response_mime_type}; charset=UTF-8");
-    print $sm->fetch("index.{$response_format}");
-
+			case 'browse' :
+				include('browse.php');
+				break;			
+			
+			case 'submit' :
+				include('submit.php');
+				break;
+				
+			case 'help' :
+				include('help.php');
+				break;				
+			
+			case 'forum' :
+				include('forum.php');
+				break;
+			
+			default :
+			// check if basename equals username
+			// if not throw error
+				break;
+		}
+	}
+	else
+	{
+		include('default.php');
+	}
+	
 ?>

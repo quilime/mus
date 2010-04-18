@@ -1,30 +1,31 @@
 tree
 
-	/reg
-		username (check avail)
-		email (private)
-		password
-		verify
-		captcha
-		create account		
-
-
 	/login
 		username (or email)
 		password (forgot pw)
 		login
+		|
+		/reg
+			username (check avail)
+			email (private)
+			password
+			verify
+			captcha
+			create account		
 
 
-	/sets
-		recent (rss)
-		random
+	/submissions
+		view
+			recent (rss)
+			random
 		
 
-	/submit
+	/upload
 		(must be logged in)
 		title
 		description
 		zipfile
+		mp3		
 		image
 		
 

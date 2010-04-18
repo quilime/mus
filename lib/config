@@ -1,0 +1,14 @@
+; MUS config.ini
+; Comments start with ';', as in php.ini
+
+[local]
+timezone = "TZ=America/Los_Angeles"
+logo = ""
+temp = "/../tmp"
+site_title = "mus"
+include_path = ""
+
+[db]
+dsn      = "mysql:host=mysql.example.com;dbname=mus"
+username = ""
+password = ""

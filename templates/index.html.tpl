@@ -3,16 +3,20 @@
 <html lang="en">
 <head>
 
-	<title>MUS</title>
+	<title>{$site_title}</title>
+	
+	{include file="headersrc.html.tpl"}
 	
 </head>
 
 <body>
 
+	{include file="nav.html.tpl"}
+
     <div id="page">
- 
-		index
-    
+	
+		landing page
+		
     </div>
 	
 </body>

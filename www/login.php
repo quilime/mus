@@ -24,6 +24,6 @@
     }
 
     header("Content-Type: {$response_mime_type}; charset=UTF-8");
-    print $sm->fetch("upload.{$response_format}");
+    print $sm->fetch("login.{$response_format}.tpl");
 
 ?>

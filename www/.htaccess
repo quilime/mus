@@ -1,5 +1,10 @@
-Options +FollowSymLinks
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
 
 
 # RewriteRule ^albums/added-by/([^/]+)/?$ albums.php?added-by=$1 [L]
@@ -9,14 +14,14 @@ RewriteEngine On
 # RewriteRule ^artists/order-by/([^/]+)/?$ artists.php?order-by=$1 [L]
 # RewriteRule ^artists/([^/]+)/([^/]+)/?$ tracks.php?album-artist=$1&album=$2 [L]
 
-RewriteRule ^users/([^/]+)/?$ users.php?name=$1 [L]
+#RewriteRule ^users/([^/]+)/?$ users.php?name=$1 [L]
 
 # RewriteRule ^st/([^/]+)/?$ stats.php?name=$1 [L]
 # RewriteRule ^st/$ stats.php [L]
 
 # re-write url to go to php page by default (last rule)
-RewriteRule ^([^/\.]+)/?$ $1.php [L]
+#RewriteRule ^([^/\.]+)/?$ $1.php [L]
 
 # remove www from URL
 # RewriteCond %{HTTP_HOST} !^okaynokay\.com$ [NC]
-# RewriteRule ^(.*)$ http://okaynokay.com/$1 [R=301,L]
+# RewriteRule ^(.*)$ index.php [R=301,L]

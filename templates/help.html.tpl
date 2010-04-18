@@ -3,16 +3,24 @@
 <html lang="en">
 <head>
 
-	<title>/ upload</title>
+	<title>{$site_title} / help</title>
+	
+	{include file="headersrc.html.tpl"}
 	
 </head>
 
 <body>
 
+	{include file="nav.html.tpl"}
+
     <div id="page">
- 
-		upload
-    
+	
+		<pre>
+		help
+		
+		TOC for helpfiles
+		</pre>
+		
     </div>
 	
 </body>
