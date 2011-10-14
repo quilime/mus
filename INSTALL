@@ -1,14 +1,9 @@
-
-					MUS 
+MUS 
 					
-		  	  Music Submission
-		
-		
+Syzygryd Music Submission
+				
 TO INSTALL
 
-1. 	edit lib/config
-
-2. 	run Makefile
-	--
-	$ make
+- edit lib/config
+- $  make
 
